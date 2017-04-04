@@ -1,0 +1,113 @@
+/// @author     Ira
+/// @version    1.0
+/// @requires   dropdowns.js
+
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+
+    a.dropdown-toggle {
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+
+        &.button {
+            margin: 0;
+        }
+    }
+
+    ul {
+        opacity: 0;
+        visibility: hidden;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        min-width: 100%;
+        max-height: 0px;
+        box-sizing: border-box;
+        background: #fff;
+        overflow: hidden;
+        box-shadow: 0 1px 5px 0 rgba(0,0,0,0.15),0 1px 1px 0 rgba(0,0,0,0.1),0 2px 1px -1px rgba(0,0,0,0.1);
+        transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.5s ease;
+
+        // Positions
+        &.align-top-left {
+            top: 0;
+            left: 0;
+            right: auto;
+            bottom: auto;
+        }
+        &.align-top-right {
+            top: 0;
+            left: auto;
+            right: 0;
+            bottom: auto;
+        }
+        &.align-bottom-left {
+            top: auto;
+            left: 0;
+            right: auto;
+            bottom: 0;
+        }
+        &.align-bottom-right {
+            top: auto;
+            left: auto;
+            right: 0;
+            bottom: 0;
+        }
+
+        &.active {
+            max-height: 250px;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    li {
+        text-align: left;
+
+        &.heading {
+            font-weight: 600;
+            padding: 8px 20px;
+            white-space: pre;
+            color: #333;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            padding: 8px 20px;
+            background: #fff;
+            color: #333;
+            font-weight: 400;
+            cursor: pointer;
+            white-space: pre;
+
+            &:hover,
+            &:focus,
+            &.selected {
+                background: #f4f4f4;
+            }
+        }
+
+        // Icons
+        i.material-icons {
+            font-size: inherit;
+            line-height: inherit;
+            vertical-align: middle;
+            margin-right: 5px;
+            color: #444;
+
+            + span {
+                display: inline-block;
+                vertical-align: middle;
+                margin-top: -2px;
+            }
+        }
+    }
+}

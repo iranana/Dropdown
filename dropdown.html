@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nudge</title>
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Karla:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./dropdown.css" />
+</head>
+
+
+<body>
+  <div id="test-dropdown" class="dropdown">
+      <a class="dropdown-toggle button">
+          <i class="material-icons">person</i>
+          <span>My account</span>
+          <i class="material-icons">arrow_drop_down</i>
+      </a>
+      <ul>
+          <li class="heading">Ira</li>
+          <li><a class="waves" href="">Settings</a></li>
+          <li><a class="waves" href="">Sign out</a></li>
+      </ul>
+  </div>
+  <div id="test-dropdown-two" class="dropdown">
+      <a class="dropdown-toggle button">
+          <i class="material-icons">settings</i>
+          <span>Tenant Name</span>
+          <i class="material-icons">arrow_drop_down</i>
+      </a>
+      <ul>
+          <li class="heading">Tenant name</li>
+          <li><a class="waves" href="">Settings</a></li>
+          <li><a class="waves" href="">Visualize</a></li>
+          <li><a class="waves" href="">Reboot</a></li>
+          <li><a class="waves" href="">O Auth Flush</a></li>
+      </ul>
+  </div>
+
+  <script src="./dropdown.js"></script>
+  <script>
+    window.onload = function () {
+      var testDropdown = new Dropdown({
+        container: document.getElementById('test-dropdown')
+      });
+
+      var testDropdownTwo = new Dropdown({
+        container: document.getElementById('test-dropdown-two')
+      });
+    };
+  </script>
+</body>
+</html>
